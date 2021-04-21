@@ -15,7 +15,7 @@ timeout = 8
 
 def notify(data, mac=True):
     if not data:
-        cmd = "osascript -e 'display notification \"No updates!\" with title \"Aeries Notification\"'"
+        cmd = "osascript -e 'display notification \"No updates!\" with title \"Aeries\"'"
         os.system(cmd)
         return
     for title, bodyList in data.items(): 
@@ -48,7 +48,7 @@ def retrieveNewData():
         element_present = EC.presence_of_element_located((By.XPATH, "//a[@class='GradebookLink']"))
         WebDriverWait(driver, timeout).until(element_present)
     except TimeoutException:
-        cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries Notification Script\"'"
+        cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries\"'"
         os.system(cmd)
         return
     time.sleep(2)
@@ -72,7 +72,7 @@ def retrieveNewData():
             element_present = EC.presence_of_element_located((By.XPATH, "//tr[@class='tinymode FullWidth CardView forceShow']"))
             WebDriverWait(driver, timeout).until(element_present)
         except TimeoutException:
-            cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries Notification Script\"'"
+            cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries\"'"
             os.system(cmd)
             return
         time.sleep(1)
@@ -113,7 +113,7 @@ def retrieveNewData():
             element_present = EC.presence_of_element_located((By.CLASS_NAME, 'GradebookLink'))
             WebDriverWait(driver, timeout).until(element_present)
         except TimeoutException:
-            cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries Notification Script\"'"
+            cmd = "osascript -e 'display notification \"Script failed on timeout!\" with title \"Aeries\"'"
             os.system(cmd)
             return
         time.sleep(3)
