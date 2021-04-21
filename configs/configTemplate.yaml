@@ -1,0 +1,24 @@
+---
+  username: enter aeries username here
+  password: enter password here
+  classes: # paste in the name of the classes you want to track, needs to be word for word, found in aeries portal
+    - period 1 # ex: Calculus BC (AP) - Spring
+    - period 2
+    - period 3
+    - period 4
+    - period 5
+    - period 6 # (delete line if no 6th, or add in more dashes on new lines if more classes)
+
+
+  """
+  Example:
+  ---
+  username: alexanderh0098@mytusd.org
+  password: your_password
+  classes:
+    - US Hist-Geog - Spring
+    - Calculus BC (AP) - Spring
+    - Chemistry (AP) - Spring
+    - Statistics (AP) - Spring
+    - Comp Sci A (AP) - Spring
+    - English 3(H) - Spring
